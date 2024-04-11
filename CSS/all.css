@@ -244,8 +244,6 @@ h1, .souscont
 .sousleft{
     width: 60%;
     min-width: 200px;
-    text-overflow: scroll;
-    text-wrap: wrap;
     text-align: justify;
 }
 .sousright{
