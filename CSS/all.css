@@ -1,0 +1,439 @@
+@font-face {
+    font-family: 'SulphurPoint';
+    src: url('../Police/static/SulphurPoint-Bold.ttf') format('truetype'),
+    url('../Police/static/SulphurPoint-Light.ttf') format('truetype'),
+    url('../Police/static/SulphurPoint-Regular.ttf') format('truetype');
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    line-height: 1.5em;
+    font-family: "SulphurPoint", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    color: var(--text);
+    flex: 1 1 1;
+}
+p
+{
+    font-size: 18px;
+}
+:root
+{
+    --main1 : #464444;
+    --text : white;
+    --button-color : rgb(117, 116, 134);
+    --radius_c : 20px;
+    --radius_bu : 12px;
+}
+body
+{
+    background-color: #2F2D2D;
+    height : 100vh;
+    width: 100vw;
+    overflow:auto;
+}
+h1
+{
+    font-size: xx-large;
+}
+h3
+{
+    font-size: 24;
+}
+#en_tete
+{
+    display : flex;
+    justify-content :space-between;
+    align-items : center;
+}
+.profile
+{
+    width: 25%;
+}
+#corps
+{
+    width: 80%;
+    min-width: 830px;
+    margin: auto;
+}
+.allimg
+{
+    width: 120px;
+    height: 120px;
+    flex-shrink: 2;
+}
+.allimg:hover, button:hover
+{
+    transform: scale(1.2, 1.2);
+}
+.mainmenus
+{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bloc_principal
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: var(--radius_c);
+    background-color: var(--main1);
+}
+.bloc_principal h1, .bloc_principal .mainmenus, .bloc_principal .button
+{
+    margin: 45px auto;
+}
+button
+{
+    padding: 5px 20px;
+    box-shadow: none;
+    border: 1px solid transparent;
+    background-color: var(--button-color) ;
+    border-radius: var(--radius_bu);
+    font-weight: bold;
+}
+button:hover
+{
+    box-shadow: 0px 1px 6px 2px rgb(152, 116, 238);
+    cursor: pointer;
+}
+
+
+
+.right1
+{
+    height: 500px;
+    border-radius: var(--radius_c);
+    background: var(--main1);
+    box-sizing: border-box;
+    width: 68%;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    display: none;
+    box-shadow: 0px 0px 12px 2px rgb(117, 116, 134);
+}
+.container01
+{
+    margin: 60px auto;
+    width: fit-content;
+    height: 360px;
+    position: relative;
+    /* border: 1px solid  blue; */
+}
+.zonetext:focus, input:focus, .Priority:focus
+{
+    outline: none; 
+}
+input, .zonetext, option, .Priority, select
+{
+    border-radius: 5px;
+    border: none;
+    color: rgb(68, 67, 67);
+    padding: 5px 12px;  
+    width: 100%;
+    /* border: 3px solid blue; */
+}
+.zonetext
+{
+    border-radius: 0px 18px 0px 18px;
+}
+.zonetext::-webkit-scrollbar
+{
+    border-radius: 18px;
+    background-color: transparent;
+    border: 1px solid  transparent;
+    cursor: pointer;
+}
+.taches::-webkit-scrollbar
+{
+    border-radius: 18px;
+    background-color: white;
+    border: 1px solid  transparent;
+    cursor: pointer;
+}
+.zonetext::-webkit-scrollbar-thumb
+{
+    border-radius: 18px;
+    background-color: rgb(203, 199, 211);
+}
+.formulaire
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+}
+.text
+{
+    grid-area: 2/1/4/2;
+}
+.date
+{
+    grid-area: 1/2/2/3;
+    /* border: 1px solid  blue; */
+    /* height: fit-content; */
+}
+.title
+{
+    grid-area: 1/1/2/2;
+    /* border: 1px solid  blue; */
+    /* height: fit-content; */
+}
+.Status
+{
+    grid-area: 2/2/3/3;
+}
+select
+{
+    width: 100%;
+    background-color: white;
+    border-radius: var(--radius_bu);
+}
+select:focus
+{
+    border-radius: 20px 20px 0px 0px;
+}
+select > option:last-of-type
+{
+    margin-bottom: 12px;
+}
+.tacheinfocont{
+    width: 100%;
+    height: max-content;
+    padding: 12px;
+    /* background: var(--main1); */
+    color: var(--text);
+    box-sizing: border-box;
+    /* border-radius: var(--radius_c); */
+    animation: rentre 2s ease-in-out;
+    /* display: none; */
+}
+@keyframes rentre{
+    0%{
+        transform : scale(0.1, 0.1);
+    }
+    100%{
+        transform : scale(1, 1)
+    }
+}
+.tacheinfos{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+h1, .souscont
+{
+    width: 100%;
+    /* border: 1px solid white; */
+}
+.souscont{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.sousleft{
+    width: 60%;
+    min-width: 200px;
+    text-overflow: scroll;
+    text-wrap: wrap;
+    text-align: justify;
+}
+.sousright{
+    width: 35%;
+    min-width: 125px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sousright > div
+{   width: 100%;}
+
+.pricipale
+{
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    overflow: hidden;
+}
+.left, .right
+{
+    height: 500px;
+    border-radius: var(--radius_c);
+    background: var(--main1);
+}
+.left {width: 30%; min-width: 247px}
+.right {width: 68%;}
+.taches
+{
+    margin: 10px 20px;
+    height : 400px;
+    overflow-y : scroll;
+}
+a
+{
+    display: block;
+    text-decoration: none;
+    /* padding: auto 50px; */
+    /* border: 1px solid blue; */
+    width: 100%;
+}
+.taches > li
+{
+    /* background: rgb(117, 116, 134); */
+    padding: 2px 4px;
+}
+.taches ul
+{
+    width: 100%;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.container, .container1
+{
+    margin: 10px 20px;
+    height: 100%;
+}
+.container ul li > div
+{
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items : center;
+}
+.container > ul > li
+{
+    margin: 10px 10px 10px 20px;
+    list-style-type: none;
+    padding: 2px 5px;
+    border: 1px solid transparent;
+}
+.container1 > ul > li
+{
+    /* margin: auto 20px; */
+    /* margin-bottom: 5px; */
+    list-style-type: none;
+    padding: 2px auto;
+    border-bottom: 1px solid rgb(236, 235, 235)
+    /* border: 1px solid blue; */
+}
+.lis:hover, .taches > li:hover
+{
+    cursor: pointer;
+    background-color:  rgb(117, 116, 134);
+}
+.lis1
+{
+    border-radius: var(--radius_c);
+    cursor: pointer;
+    background: rgb(117, 116, 134);
+}
+.taches2
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    /* border: 1px solid blue; */
+    align-items: center;
+    padding: 12px;
+}
+.favorite, .tasktitle
+{
+    height: 20px;
+    line-height: normal;
+    font-size: 18px;
+    padding: 1px;
+    /* border: 1px solid blue; */
+    /* justify-self: end; */
+    /* margin: 0px; */
+}
+.select{ justify-self: center; /* margin: 0px; */}
+.tasktitle{ justify-self: start; /* margin: 0px; */}
+.favorite{ justify-self: center; /* margin: 0px; */}
+.container h3
+{
+    font-weight: lighter;
+}
+.allimg1
+{
+    width: 28px;
+    height: 28px;
+    margin: 6px 16px 0 6px;
+}
+.foot
+{
+    display: flex;
+    width: 100%;
+    bottom: 20px;
+    position: absolute;
+    justify-content:end;
+}
+.fermer, .deleteBtn
+{
+    background-color: brown;
+}
+.fermer
+{   
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+.fermer:hover, .deleteBtn:hover
+{
+    box-shadow: 0px 1px 6px 2px rgb(238, 116, 124);
+    cursor: pointer;
+}
+.dateinfo, .priorityinfo, .statusinfo
+{
+    text-align: center;
+}
+@media screen and (max-width: 480px) {
+    #profile {
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+        background-color: #464444;
+        margin-bottom: 12px;
+        width: 100vw;
+        position: sticky;
+    }
+    
+    .add img {
+        border-radius: 50%;
+        background: white;
+        padding: 15px;
+        position: absolute;
+        top: 0px;
+    }
+    
+    .add {
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+        background-color: #464444;
+        margin-top: 12px;
+        width: 100vw;
+        position: relative;
+    } 
+
+    .right
+    {
+        width: 50%;
+    }
+    
+    .left {
+        display: none;
+    }
+   
+}
