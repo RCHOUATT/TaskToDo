@@ -212,7 +212,7 @@ select > option:last-of-type
     color: var(--text);
     box-sizing: border-box;
     /* border-radius: var(--radius_c); */
-    animation: rentre 2s ease-in-out;
+    animation: rentre 1s ease-in-out;
     /* display: none; */
 }
 @keyframes rentre{
